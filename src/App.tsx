@@ -1,11 +1,15 @@
+import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
+import { Router } from './Router'
 import { GlobalStyle } from './sytles/globals'
 import { defaultTheme } from './sytles/themes/default'
 
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <h1>Olá!</h1>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
       <GlobalStyle />
     </ThemeProvider>
   )
